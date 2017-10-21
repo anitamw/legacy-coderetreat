@@ -30,16 +30,23 @@ def test_correct_answers_eventually_wins(game):
 def test_wrong_answer_does_not_win(game):
     for i in range(5):
         for p in ['a', 'b']:
-            game.roll(1)
+            game.roll(2)
             assert game.was_correctly_answered()
+    # both at place 10
     game.roll(1)
     assert game.wrong_answer()
     game.roll(1)
     assert game.wrong_answer()
-    game.roll(2)
+    game.roll(4)
     assert game.was_correctly_answered()
-    game.roll(1)
+    game.roll(3)
     assert not game.was_correctly_answered()
+
+
+def test_two_sixes_does_not_crash(game):
+    for i in range(4):
+        game.roll(6)
+        game.was_correctly_answered()
 
 
 def test_is_playable():
