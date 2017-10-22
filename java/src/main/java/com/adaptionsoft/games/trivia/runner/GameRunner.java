@@ -10,23 +10,24 @@ public class GameRunner {
 
 	public static void main(String[] args) {
 		Game aGame = new Game();
-		
+
 		aGame.add("Chet");
 		aGame.add("Pat");
 		aGame.add("Sue");
 
 		Random rand;
         rand = args.length > 0 ? new Random(getSeedFromArgs(args)) : new Random();
-	
+
 		do {
 			aGame.roll(rand.nextInt(5) + 1);
 			if (rand.nextInt(9) == 7) {
-				notAWinner = aGame.wrongAnswer();
+				aGame.wrongAnswer();
 			} else {
-				notAWinner = aGame.wasCorrectlyAnswered();
+				aGame.wasCorrectlyAnswered();
 			}
-		} while (notAWinner);
-		
+            notAWinner = !aGame.won();
+        } while (notAWinner);
+
 	}
 
 	private static long getSeedFromArgs(String[] args) {

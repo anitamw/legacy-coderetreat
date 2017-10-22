@@ -111,10 +111,12 @@ public class GameTest {
         g.add("Player One");
         final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(myOut));
+        assertThat(g.won(), is(false));
         for (int turn = 0; turn < 6; turn++) {
             g.roll(6);
             g.wasCorrectlyAnswered();
         }
+        assertThat(g.won(), is(true));
         String[] outputLines = myOut.toString().split("\n");
         String lastLine = outputLines[outputLines.length - 1];
         assertThat("Last line should declare winner:",

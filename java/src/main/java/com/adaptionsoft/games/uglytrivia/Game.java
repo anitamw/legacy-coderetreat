@@ -112,26 +112,28 @@ public class Game {
     }
 
 
-    public boolean wasCorrectlyAnswered() {
+    public void wasCorrectlyAnswered() {
         waitingForAnswer = false;
-        boolean notAWinner;
-        if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox) {
-            printAnswerWasCorrect();
-            if (inPenaltyBox[currentPlayer]) {
-                inPenaltyBox[currentPlayer] = false;
-                System.out.println(players.get(currentPlayer) + " got out of the penalty box!");
-            }
-            purses[currentPlayer]++;
-            printPlayerPurse(currentPlayer);
-            notAWinner = didNotWin();
-            if (!notAWinner) {
-                printGameWon(players.get(currentPlayer));
-            }
-        } else {
-            notAWinner = true;
+        if (inPenaltyBox[currentPlayer] && !isGettingOutOfPenaltyBox) {
+            currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
+            return;
+        }
+        printAnswerWasCorrect();
+        cancelAnyPenalty();
+        purses[currentPlayer]++;
+        printPlayerPurse(currentPlayer);
+        if (won()) {
+            printGameWon(players.get(currentPlayer));
+            return;
         }
         currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
-        return notAWinner;
+    }
+
+    private void cancelAnyPenalty() {
+        if (inPenaltyBox[currentPlayer]) {
+            inPenaltyBox[currentPlayer] = false;
+            printPlayerEscapedPenaltyBox(players.get(currentPlayer));
+        }
     }
 
     private void printGameWon(String winnerName) {
@@ -143,16 +145,15 @@ public class Game {
                 + " now has " + purses[currentPlayer] + " Gold Coins.");
     }
 
-    public boolean wrongAnswer() {
+    public void wrongAnswer() {
         waitingForAnswer = false;
         printAnswerWasWrong(players.get(currentPlayer));
         inPenaltyBox[currentPlayer] = true;
         currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
-        return true;
     }
 
-    private boolean didNotWin() {
-        return !(purses[currentPlayer] == 6);
+    public boolean won() {
+        return purses[currentPlayer] == 6;
     }
 
     private static int getNextPlayerIndex(int currentPlayer, int numberOfPlayers) {
@@ -167,6 +168,10 @@ public class Game {
     private static void printPenaltyBoxStatus(String playerName, boolean isGettingOut) {
         System.out.println(playerName + (isGettingOut ? " is " : " is not ") +
                 "getting out of the penalty box");
+    }
+
+    private static void printPlayerEscapedPenaltyBox(String playerName) {
+        System.out.println(playerName + " got out of the penalty box!");
     }
 
     private static void printAnswerWasCorrect() {
