@@ -18,9 +18,10 @@ public class Game {
 
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
+    private boolean waitingForAnswer;
 
     public Game() {
-        for (int i = 0; i < 50; i++) {
+        for (int i = 1; i <= 50; i++) {
             popQuestions.add("Pop Question " + i);
             scienceQuestions.add(("Science Question " + i));
             sportsQuestions.add(("Sports Question " + i));
@@ -59,11 +60,16 @@ public class Game {
         places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
         printPlayerLocation(currentPlayer);
         askQuestion();
+        waitingForAnswer = true;
     }
 
     private void checkRollIsLegal(int roll) {
         if (players.size() < 1) {
             throw new IllegalStateException("Must add at least one player before rolling");
+        }
+        if (waitingForAnswer) {
+            throw new IllegalStateException(players.get(currentPlayer) + " must answer before " +
+                    "the next player can roll");
         }
         if (roll < 1 || roll > 6) {
             throw new IllegalArgumentException("Roll must be between 1 and 6 (inclusive)");
@@ -107,6 +113,7 @@ public class Game {
 
 
     public boolean wasCorrectlyAnswered() {
+        waitingForAnswer = false;
         boolean notAWinner;
         if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox) {
             printAnswerWasCorrect();
@@ -126,6 +133,7 @@ public class Game {
     }
 
     public boolean wrongAnswer() {
+        waitingForAnswer = false;
         printAnswerWasWrong(players.get(currentPlayer));
         inPenaltyBox[currentPlayer] = true;
         currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
