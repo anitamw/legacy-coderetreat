@@ -47,6 +47,7 @@ public class Game {
     }
 
     public void roll(int roll) {
+        checkRollIsLegal(roll);
         printPlayersRoll(roll, players.get(currentPlayer));
         if (inPenaltyBox[currentPlayer]) {
             isGettingOutOfPenaltyBox = isLucky(roll);
@@ -58,6 +59,15 @@ public class Game {
         places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
         printPlayerLocation(currentPlayer);
         askQuestion();
+    }
+
+    private void checkRollIsLegal(int roll) {
+        if (players.size() < 1) {
+            throw new IllegalStateException("Must add at least one player before rolling");
+        }
+        if (roll < 1 || roll > 6) {
+            throw new IllegalArgumentException("Roll must be between 1 and 6 (inclusive)");
+        }
     }
 
     private void printPlayerLocation(int playerIndex) {
