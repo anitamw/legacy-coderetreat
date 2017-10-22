@@ -61,7 +61,7 @@ public class Game {
             }
 
         } else {
-            updatePosition(roll, places[currentPlayer]);
+            places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
             printPlayerLocation(currentPlayer);
             askQuestion();
         }
