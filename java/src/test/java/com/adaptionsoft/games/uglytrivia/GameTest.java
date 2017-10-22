@@ -7,8 +7,7 @@ import org.junit.rules.ExpectedException;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.hamcrest.CoreMatchers.containsString;
-import static org.hamcrest.CoreMatchers.not;
+import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
@@ -106,4 +105,19 @@ public class GameTest {
         assertThat(myOut.toString(), not(containsString("penalty box")));
     }
 
+    @Test
+    public void gameEnds() {
+        Game g = new Game();
+        g.add("Player One");
+        final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(myOut));
+        for (int turn = 0; turn < 6; turn++) {
+            g.roll(6);
+            g.wasCorrectlyAnswered();
+        }
+        String[] outputLines = myOut.toString().split("\n");
+        String lastLine = outputLines[outputLines.length - 1];
+        assertThat("Last line should declare winner:",
+                lastLine, is("Player One won the game!"));
+    }
 }

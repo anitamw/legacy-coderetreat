@@ -152,6 +152,7 @@ public class GoldenMasterTests {
                 "Pop Question 3\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -273,6 +274,7 @@ public class GoldenMasterTests {
                 "Pop Question 5\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -409,6 +411,7 @@ public class GoldenMasterTests {
                 "Science Question 6\n" +
                 "Answer was correct!!!!\n" +
                 "Sue now has 6 Gold Coins.\n" +
+                "Sue won the game!\n"+
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -532,6 +535,7 @@ public class GoldenMasterTests {
                 "Pop Question 3\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -653,6 +657,7 @@ public class GoldenMasterTests {
                 "Pop Question 5\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -789,6 +794,7 @@ public class GoldenMasterTests {
                 "Science Question 6\n" +
                 "Answer was correct!!!!\n" +
                 "Sue now has 6 Gold Coins.\n" +
+                "Sue won the game!\n"+
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -912,6 +918,7 @@ public class GoldenMasterTests {
                 "Pop Question 3\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +
@@ -1033,6 +1040,7 @@ public class GoldenMasterTests {
                 "Pop Question 5\n" +
                 "Answer was correct!!!!\n" +
                 "Pat now has 6 Gold Coins.\n" +
+                "Pat won the game!\n" +
                 "Chet was added\n" +
                 "They are player number 1\n" +
                 "Pat was added\n" +

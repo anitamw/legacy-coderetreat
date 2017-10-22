@@ -124,11 +124,18 @@ public class Game {
             purses[currentPlayer]++;
             printPlayerPurse(currentPlayer);
             notAWinner = didNotWin();
+            if (!notAWinner) {
+                printGameWon(players.get(currentPlayer));
+            }
         } else {
             notAWinner = true;
         }
         currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
         return notAWinner;
+    }
+
+    private void printGameWon(String winnerName) {
+        System.out.println(winnerName + " won the game!");
     }
 
     private void printPlayerPurse(int playerIndex) {
