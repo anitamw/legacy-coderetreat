@@ -1,5 +1,6 @@
-package com.adaptionsoft.games.trivia.runner;
+package com.adaptionsoft.games.uglytrivia;
 
+import com.adaptionsoft.games.trivia.runner.GameRunner;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -37,21 +38,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -65,14 +66,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -82,14 +83,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -104,14 +105,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -126,14 +127,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 1\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 11\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
@@ -148,7 +149,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -161,77 +162,77 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 4\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 3\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 2 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 1\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 3 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 4 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
@@ -245,14 +246,14 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 5 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 13\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
@@ -269,7 +270,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 15\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -282,21 +283,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -310,14 +311,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -339,7 +340,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -357,7 +358,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -375,7 +376,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -388,7 +389,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -401,21 +402,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -429,14 +430,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -446,14 +447,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -468,14 +469,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -490,14 +491,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 1\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 11\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
@@ -512,7 +513,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -525,77 +526,77 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 4\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 3\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 2 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 1\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 3 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 4 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
@@ -609,14 +610,14 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 5 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 13\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
@@ -633,7 +634,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 15\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -646,21 +647,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -674,14 +675,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -703,7 +704,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -721,7 +722,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -739,7 +740,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -752,7 +753,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -765,21 +766,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -793,14 +794,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -810,14 +811,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -832,14 +833,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
@@ -854,14 +855,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 1\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 11\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
@@ -876,7 +877,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -889,77 +890,77 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 4\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 3\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 2 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 1\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 3\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 3\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 6\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 3 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 3 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 5\n" +
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 4 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 4 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
@@ -973,14 +974,14 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 12\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 5 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 3\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 13\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 5 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 2\n" +
@@ -997,7 +998,7 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 15\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 6 Gold Coins.\n" +
                         "Chet was added\n" +
                         "They are player number 1\n" +
@@ -1010,21 +1011,21 @@ public class GoldenMasterTests {
                         "Chet's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 0\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Chet now has 1 Gold Coins.\n" +
                         "Pat is the current player\n" +
                         "They have rolled a 2\n" +
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 1\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 1 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 4\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 2\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 1 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -1038,14 +1039,14 @@ public class GoldenMasterTests {
                         "Pat's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 4\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Pat now has 2 Gold Coins.\n" +
                         "Sue is the current player\n" +
                         "They have rolled a 5\n" +
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 5\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 2 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 1\n" +
@@ -1067,7 +1068,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 7\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 3 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -1085,7 +1086,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 8\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 4 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 4\n" +
@@ -1103,7 +1104,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 9\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 5 Gold Coins.\n" +
                         "Chet is the current player\n" +
                         "They have rolled a 2\n" +
@@ -1116,7 +1117,7 @@ public class GoldenMasterTests {
                         "Sue's new location is 0\n" +
                         "The category is Pop\n" +
                         "Pop Question 10\n" +
-                        "Answer was corrent!!!!\n" +
+                        "Answer was correct!!!!\n" +
                         "Sue now has 6 Gold Coins.\n";
 
         String[] expectedLines = expectedOutput.split("\n");
