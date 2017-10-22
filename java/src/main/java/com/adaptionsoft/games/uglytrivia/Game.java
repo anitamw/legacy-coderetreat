@@ -49,23 +49,15 @@ public class Game {
     public void roll(int roll) {
         printPlayersRoll(roll, players.get(currentPlayer));
         if (inPenaltyBox[currentPlayer]) {
-            if (!isLucky(roll)) {
-                printPenaltyBoxStatus(players.get(currentPlayer), false);
-                isGettingOutOfPenaltyBox = false;
-            } else {
-                isGettingOutOfPenaltyBox = true;
-                printPenaltyBoxStatus(players.get(currentPlayer), true);
-                places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
-                printPlayerLocation(currentPlayer);
-                askQuestion();
-            }
-
-        } else {
-            places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
-            printPlayerLocation(currentPlayer);
-            askQuestion();
+            isGettingOutOfPenaltyBox = isLucky(roll);
+            printPenaltyBoxStatus(players.get(currentPlayer), isGettingOutOfPenaltyBox);
         }
-
+        if (inPenaltyBox[currentPlayer] && !isGettingOutOfPenaltyBox) {
+            return;
+        }
+        places[currentPlayer] = updatePosition(roll, places[currentPlayer]);
+        printPlayerLocation(currentPlayer);
+        askQuestion();
     }
 
     private void printPlayerLocation(int playerIndex) {
@@ -105,31 +97,22 @@ public class Game {
 
 
     public boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer]) {
-            if (isGettingOutOfPenaltyBox) {
-                purses[currentPlayer]++;
-                printAnswerWasCorrect();
-                printPlayerPurse(currentPlayer);
-                boolean winner = didPlayerWin();
-                currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
-                return winner;
-            } else {
-                currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
-                return true;
-            }
-
-        } else {
+        boolean notAWinner;
+        if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox) {
             printAnswerWasCorrect();
             purses[currentPlayer]++;
             printPlayerPurse(currentPlayer);
-            boolean winner = didPlayerWin();
-            currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
-            return winner;
+            notAWinner = didNotWin();
+        } else {
+            notAWinner = true;
         }
+        currentPlayer = getNextPlayerIndex(currentPlayer, players.size());
+        return notAWinner;
     }
 
     private void printPlayerPurse(int playerIndex) {
-        System.out.println(players.get(playerIndex) + " now has " + purses[currentPlayer] + " Gold Coins.");
+        System.out.println(players.get(playerIndex)
+                + " now has " + purses[currentPlayer] + " Gold Coins.");
     }
 
     public boolean wrongAnswer() {
@@ -139,7 +122,7 @@ public class Game {
         return true;
     }
 
-    private boolean didPlayerWin() {
+    private boolean didNotWin() {
         return !(purses[currentPlayer] == 6);
     }
 
