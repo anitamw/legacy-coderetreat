@@ -117,6 +117,10 @@ public class Game {
         boolean notAWinner;
         if (!inPenaltyBox[currentPlayer] || isGettingOutOfPenaltyBox) {
             printAnswerWasCorrect();
+            if (inPenaltyBox[currentPlayer]) {
+                inPenaltyBox[currentPlayer] = false;
+                System.out.println(players.get(currentPlayer) + " got out of the penalty box!");
+            }
             purses[currentPlayer]++;
             printPlayerPurse(currentPlayer);
             notAWinner = didNotWin();

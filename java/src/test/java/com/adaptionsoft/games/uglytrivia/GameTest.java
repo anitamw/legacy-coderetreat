@@ -86,15 +86,12 @@ public class GameTest {
     public void canEscapeThePenaltyBox() {
         Game g = new Game();
         g.add("Juno");
-        g.add("Philbert");
-        g.roll(6);
+        g.roll(1);
         final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(myOut));
         g.wrongAnswer();
         assertThat(myOut.toString(), containsString("Juno was sent to the penalty box"));
         myOut.reset();
-        g.roll(2);
-        g.wasCorrectlyAnswered();
         g.roll(2);
         assertThat(myOut.toString(), containsString("Juno is not getting out of the penalty box"));
         myOut.reset();
@@ -103,8 +100,7 @@ public class GameTest {
         myOut.reset();
         g.wasCorrectlyAnswered();
         assertThat(myOut.toString(), containsString("Answer was correct"));
-        g.roll(4);
-        g.wasCorrectlyAnswered();
+        assertThat(myOut.toString(), containsString("Juno got out of the penalty box"));
         myOut.reset();
         g.roll(6);
         assertThat(myOut.toString(), not(containsString("penalty box")));
