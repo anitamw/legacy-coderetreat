@@ -3,26 +3,56 @@ package com.adaptionsoft.games.uglytrivia;
 import com.adaptionsoft.games.trivia.runner.GameRunner;
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
 public class GoldenMasterTests {
 
+    static class FakeInputStream extends InputStream {
+        private int nReads = 0;
+
+        @Override
+        public int read() throws IOException {
+            nReads++;
+            return 0;
+        }
+
+        public int timesRead() {
+            return nReads;
+        }
+    }
+
+    // @Test
+    // Disabled due to input scanning not working.
+    // should use soln at https://stackoverflow.com/a/6416591
+    public void testPlayableGameAwaitsInput() {
+        final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(myOut));
+        FakeInputStream fakeInput = new FakeInputStream();
+        System.setIn(fakeInput);
+
+        GameRunner runner = new GameRunner();
+        runner.main(new String[]{"--play"});
+
+        assertThat(myOut.toString(), containsString("How many players?"));
+        assertThat("Number of times input was read", fakeInput.timesRead(), is(1));
+        assertThat(myOut.toString(), containsString("Game created with 2 players"));
+    }
+
     @Test
     public void testMain() throws Exception {
         final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
         System.setOut(new PrintStream(myOut));
-        GameRunner runner = new GameRunner();
         for (int i = 0; i < 3; i++) {
-            runner.main(new String[]{"121"});
-            runner.main(new String[]{"12840271"});
-            runner.main(new String[]{"74"});
+            GameRunner.main(new String[]{"121"});
+            GameRunner.main(new String[]{"12840271"});
+            GameRunner.main(new String[]{"74"});
         }
         checkStdOut(myOut);
     }

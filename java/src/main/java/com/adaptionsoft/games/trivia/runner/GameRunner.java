@@ -1,42 +1,54 @@
 
 package com.adaptionsoft.games.trivia.runner;
+
 import com.adaptionsoft.games.uglytrivia.Game;
 
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class GameRunner {
-	private static boolean notAWinner;
+    private static boolean notAWinner;
 
-	public static void main(String[] args) {
-		Game aGame = new Game();
+    public static void main(String[] args) {
+        Random rand;
+        switch (args.length) {
+            case 0:
+                rand = new Random();
+                break;
+            default:
+                if (args[0].equals("--play")) {
+                    System.out.println("How many players?");
+                    Scanner scanner = new Scanner(System.in);
+                    scanner.nextLine();
+                    return;
+                }
+                rand = new Random(getSeedFromArg(args[0]));
+        }
+        Game aGame = new Game();
+        aGame.add("Chet");
+        aGame.add("Pat");
+        aGame.add("Sue");
 
-		aGame.add("Chet");
-		aGame.add("Pat");
-		aGame.add("Sue");
-
-		Random rand;
-        rand = args.length > 0 ? new Random(getSeedFromArgs(args)) : new Random();
-
-		do {
-			aGame.roll(rand.nextInt(5) + 1);
-			if (rand.nextInt(9) == 7) {
-				aGame.wrongAnswer();
-			} else {
-				aGame.wasCorrectlyAnswered();
-			}
+        do {
+            aGame.roll(rand.nextInt(5) + 1);
+            if (rand.nextInt(9) == 7) {
+                aGame.wrongAnswer();
+            } else {
+                aGame.wasCorrectlyAnswered();
+            }
             notAWinner = !aGame.won();
         } while (notAWinner);
 
-	}
+    }
 
-	private static long getSeedFromArgs(String[] args) {
-		long seed;
-		try {
-             seed = Long.parseLong(args[0]);
-         } catch (NumberFormatException nfe) {
-             throw new IllegalArgumentException("First arg, if passed, must be a long for random seed");
-         }
-		return seed;
-	}
+    private static long getSeedFromArg(String arg) {
+        long seed;
+        try {
+            seed = Long.parseLong(arg);
+        } catch (NumberFormatException nfe) {
+            throw new IllegalArgumentException("First arg, if passed, must be a long for random seed");
+        }
+        return seed;
+    }
 }
