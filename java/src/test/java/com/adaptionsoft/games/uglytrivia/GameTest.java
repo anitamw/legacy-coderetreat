@@ -8,6 +8,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
 import static org.hamcrest.CoreMatchers.containsString;
+import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 /**
@@ -80,4 +81,33 @@ public class GameTest {
         thrown.expectMessage("Player 1 must answer before the next player can roll");
         g.roll(3);
     }
+
+    @Test
+    public void canEscapeThePenaltyBox() {
+        Game g = new Game();
+        g.add("Juno");
+        g.add("Philbert");
+        g.roll(6);
+        final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(myOut));
+        g.wrongAnswer();
+        assertThat(myOut.toString(), containsString("Juno was sent to the penalty box"));
+        myOut.reset();
+        g.roll(2);
+        g.wasCorrectlyAnswered();
+        g.roll(2);
+        assertThat(myOut.toString(), containsString("Juno is not getting out of the penalty box"));
+        myOut.reset();
+        g.roll(1);
+        assertThat(myOut.toString(), containsString("Juno is getting out of the penalty box"));
+        myOut.reset();
+        g.wasCorrectlyAnswered();
+        assertThat(myOut.toString(), containsString("Answer was correct"));
+        g.roll(4);
+        g.wasCorrectlyAnswered();
+        myOut.reset();
+        g.roll(6);
+        assertThat(myOut.toString(), not(containsString("penalty box")));
+    }
+
 }
