@@ -1,12 +1,13 @@
 package com.adaptionsoft.games.uglytrivia;
 
+import com.adaptionsoft.games.trivia.runner.GameOutput;
 import com.adaptionsoft.games.trivia.runner.GameRunner;
+import com.adaptionsoft.games.trivia.runner.PlayerInput;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,13 +19,13 @@ import static org.hamcrest.Matchers.hasSize;
 
 public class GoldenMasterTests {
 
-    static class FakeInputStream extends InputStream {
+    static class FakeInputStream implements PlayerInput {
         private int nReads = 0;
 
         @Override
-        public int read() throws IOException {
+        public String readLine() {
             nReads++;
-            return 0;
+            return "2";
         }
 
         public int timesRead() {
@@ -32,17 +33,26 @@ public class GoldenMasterTests {
         }
     }
 
-    // @Test
-    // Disabled due to input scanning not working.
-    // should use soln at https://stackoverflow.com/a/6416591
+    @Test
     public void testPlayableGameAwaitsInput() {
-        final ByteArrayOutputStream myOut = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(myOut));
-        FakeInputStream fakeInput = new FakeInputStream();
-        System.setIn(fakeInput);
+        final GameOutput myOut = new GameOutput() {
 
-        GameRunner runner = new GameRunner();
-        runner.main(new String[]{"--play"});
+            public List<String> mLines = new ArrayList<>();
+
+            @Override
+            public void printLine(String line) {
+                mLines.add(line);
+            }
+
+            @Override
+            public String toString() {
+                return String.valueOf(mLines);
+            }
+        };
+        FakeInputStream fakeInput = new FakeInputStream();
+
+        GameRunner runner = new GameRunner(fakeInput, myOut);
+        runner.run(new String[]{"--play"});
 
         assertThat(myOut.toString(), containsString("How many players?"));
         assertThat("Number of times input was read", fakeInput.timesRead(), is(1));

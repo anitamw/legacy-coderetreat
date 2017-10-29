@@ -9,8 +9,31 @@ import java.util.Scanner;
 
 public class GameRunner {
     private static boolean notAWinner;
+    private final PlayerInput mIn;
+    private final GameOutput mOut;
+
+    public GameRunner(PlayerInput in, GameOutput out) {
+        mIn = in;
+        mOut = out;
+    }
 
     public static void main(String[] args) {
+        final Scanner scanner = new Scanner(System.in);
+        GameRunner runner = new GameRunner(new PlayerInput() {
+            @Override
+            public String readLine() {
+                return scanner.nextLine();
+            }
+        }, new GameOutput() {
+            @Override
+            public void printLine(String line) {
+                System.out.println(line);
+            }
+        });
+        runner.run(args);
+    }
+
+    public void run(String[] args) {
         Random rand;
         switch (args.length) {
             case 0:
@@ -18,9 +41,10 @@ public class GameRunner {
                 break;
             default:
                 if (args[0].equals("--play")) {
-                    System.out.println("How many players?");
-                    Scanner scanner = new Scanner(System.in);
-                    scanner.nextLine();
+                    mOut.printLine("How many players?");
+                    String answer = mIn.readLine();
+                    int number = Integer.parseInt(answer);
+                    mOut.printLine("Game created with " + number + " players");
                     return;
                 }
                 rand = new Random(getSeedFromArg(args[0]));
@@ -39,7 +63,6 @@ public class GameRunner {
             }
             notAWinner = !aGame.won();
         } while (notAWinner);
-
     }
 
     private static long getSeedFromArg(String arg) {
