@@ -34,7 +34,7 @@ public class GoldenMasterTests {
     }
 
     @Test
-    public void testPlayableGameAwaitsInput() {
+    public void testPlayableGameReadsInput() {
         final GameOutput myOut = new GameOutput() {
 
             public List<String> mLines = new ArrayList<>();
